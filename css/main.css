@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+header {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: forestgreen;
+}
+
+.container {
+  display: flex;
+}
+
+main {
+  background-color: #9b9b9b;
+}
+
+.items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-around;
+  margin: 30px auto;
+  width: 80%;
+}
+
+footer {
+  background-color: rgb(68, 60, 60);
+  height: 50px;
+}
+

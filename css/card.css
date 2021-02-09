@@ -1,0 +1,125 @@
+.card {
+    height: 450px;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #fff;
+    margin: 20px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.card__image {
+    margin: 10px auto;
+}
+
+.card__picture {
+    width: 170px;
+    height: 230px;
+}
+
+.card__labels {
+    color: #fff;
+    top: 20px;
+    left: 0;
+    position: absolute;
+}
+
+.card__label {
+    margin: 5px 0;
+    padding: 2px 4px;
+}
+
+.card__label--hot {
+    background-color: forestgreen;
+}
+
+.card__label--new {
+    background-color: tomato;
+}
+
+.card__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px 20px;
+}
+
+.card__title {
+    margin-bottom: 10px;
+}
+
+.card__description {
+    padding: 20px 0;
+    border-bottom : 2px solid #cdc8c8;
+}
+
+.card__price {
+    color: #e3bf07;
+    font-weight: bold;
+    margin-top: 20px;
+    display: flex;
+    justify-content: end;
+}
+
+.card__oldPrice {
+    font-weight: lighter;
+    font-size: small;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    padding: 2px 5px 0;
+}
