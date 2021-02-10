@@ -7,11 +7,18 @@ const getPrice = (price, discount = 0) => {
   return discount ? `<del class='card__oldPrice'>${price}</del><p>$${discountPrice}</p>` : `<p>$${price}</p>`
 }
 
+
 const card = (item) => {
   const {image, title, labels, description, price, discount} = item;
-
-  return (`
-     <li class='card'>
+  
+  const element = document.createElement('li');
+  element.classList.add('card');
+  
+  const delButton = document.createElement('button');
+  delButton.classList.add('card__delete');
+  delButton.addEventListener('click', () => (console.log('!!!!!')));
+  
+   element.insertAdjacentHTML('beforeend', `
          <div class='card__image'>
            <img class='card__picture' src='${image}' alt='${title}'>
              <div class='card__labels'>
@@ -28,10 +35,11 @@ const card = (item) => {
            </p>
            <div class='card__price'>
             ${getPrice(price, discount)}
-           </div>
-         </div>
-     </li>
-  `);
+           </div>`)
+  
+  element.appendChild(delButton)
+
+  return element;
 };
 
 export default card;
