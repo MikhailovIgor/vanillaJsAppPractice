@@ -1,22 +1,21 @@
-import {init} from './actions.js'
+import {INIT} from './types.js';
 
 export function createStore(reducer, initialState) {
-  let state = reducer(initialState, init());
+  let state = reducer(initialState, {type: INIT});
   let subscribers = [];
   
   const getState = () => state;
   
   const dispatch = (action) => {
-    console.log(action.type);
     state = reducer(state, action);
-    subscribers.forEach(cb => cb())
+    subscribers.forEach(cb => cb());
   };
   
   const subscribe = callback => {
     subscribers.push(callback);
-    // return () => subscribers.filter(cb => cb !== callback);
-  }
-   return {
-     getState, dispatch, subscribe
-   };
+  };
+  
+  return {
+    getState, dispatch, subscribe
+  };
 }
