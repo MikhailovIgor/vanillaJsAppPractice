@@ -7,6 +7,8 @@ export function createStore(reducer, initialState) {
   const getState = () => state;
   
   const dispatch = (action) => {
+    // return if the action is asynchronous (Redux-thunk emulation)
+    if (action.constructor === Promise) return;
     state = reducer(state, action);
     subscribers.forEach(cb => cb());
   };
