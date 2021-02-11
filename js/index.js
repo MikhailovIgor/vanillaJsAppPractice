@@ -1,16 +1,18 @@
-import card from './card.js';
+import card from './components/card.js';
+import {createStore} from "./redux/store.js";
+import {products} from "./redux/productInitialState.js";
+import {deleteProduct} from './redux/actions.js'
+import {productReducer} from "./redux/productReducer.js";
 
 const URL = 'http://localhost:3000/items';
 const items = document.querySelector('.items');
 
-const fetchProducts =  async () => {
-  const result = await fetch(URL);
-  return await result.json();
+const store = createStore(productReducer, products);
+
+const render = data => {
+  items.querySelectorAll('.card').forEach(item => item.remove());
+  items.append(...data.map(product => card(product, (id) => store.dispatch(deleteProduct(product.id)))));
 }
 
-const render = data => data.forEach(item => items.insertAdjacentHTML('beforeend', card(item)));
-
-(async () => {
-  const data = await fetchProducts();
-  render(data);
-})();
+render(store.getState());
+store.subscribe(() => render(store.getState()));
