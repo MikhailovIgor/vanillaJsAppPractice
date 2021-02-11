@@ -10,9 +10,9 @@ const items = document.querySelector('.items');
 const store = createStore(productReducer, products);
 
 const render = data => {
-  items.querySelectorAll('.card').forEach(item => item.remove()) // items.innerHTML='';
-  items.append(...data.map(product => card(product, (id) => store.dispatch(deleteProduct(product.id)))))
+  items.querySelectorAll('.card').forEach(item => item.remove());
+  items.append(...data.map(product => card(product, (id) => store.dispatch(deleteProduct(product.id)))));
 }
 
-render(store.getState())
+render(store.getState());
 store.subscribe(() => render(store.getState()));

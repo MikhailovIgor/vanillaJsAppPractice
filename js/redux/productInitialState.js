@@ -71,4 +71,4 @@ export const products = [
       new: true
     }
   }
-]
+];
