@@ -9,6 +9,7 @@ const URL = 'http://localhost:3000/items';
   const resp = await fetch(`${URL}/${id}`, {
    method: 'DELETE'
   })
+  return await resp.json();
  }
  
  export default {
