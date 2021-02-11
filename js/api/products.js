@@ -6,3 +6,4 @@ const URL = 'http://localhost:3000/items';
  };
  
  export default {getProducts};
+ 
