@@ -6,7 +6,7 @@ const items = document.querySelector('.items');
 
 const render = data => {
   items.querySelectorAll('.card').forEach(item => item.remove());
-  items.append(...data.map(product => card(product, (id) => dispatch(deleteProduct(product.id)))));
+  items.append(...data.map(product => card(product, () => dispatch(deleteProduct(product.id)))));
 }
 
 subscribe(() => render(getState()));

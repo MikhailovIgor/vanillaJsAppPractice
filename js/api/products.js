@@ -5,5 +5,14 @@ const URL = 'http://localhost:3000/items';
   return await resp.json();
  };
  
- export default {getProducts};
+ const delProduct = async (id) => {
+  const resp = await fetch(`${URL}/${id}`, {
+   method: 'DELETE'
+  })
+ }
+ 
+ export default {
+  getProducts,
+  delProduct,
+ };
  
