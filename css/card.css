@@ -72,9 +72,9 @@
 
 .card__delete {
     position: absolute;
-    right: -15px;
+    right: -10px;
     bottom: -15px;
-    background-color: red;
+    background-color: tomato;
     height: 30px;
     width: 30px;
     border-radius: 50%;
@@ -83,4 +83,5 @@
 
 .card__delete:after {
     content: 'X';
+    color: #fff;
 }

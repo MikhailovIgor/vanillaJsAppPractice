@@ -1,14 +1,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
-}
-header {
-  height: 50px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  background-color: forestgreen;
+  font-family: Arial, sans-serif;
 }
 
 .container {
@@ -28,8 +21,27 @@ main {
   width: 80%;
 }
 
-footer {
-  background-color: rgb(68, 60, 60);
-  height: 50px;
+.overflow-hidden {
+  overflow: hidden;
 }
 
+.openModal {
+  all: unset;
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  background-color: tomato;
+  color: #fff;
+  border: none;
+  font-size: xx-large;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  text-align: center;
+  transition: all .2s ease-in-out;
+}
+
+.openModal:hover {
+  transform: scale(1.1);
+}
