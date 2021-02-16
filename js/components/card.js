@@ -6,7 +6,7 @@ const getPrice = (price, discount = 0) => {
   return discount ? `<del class='card__oldPrice'>${price}</del><p>$${discountPrice}</p>` : `<p>$${price}</p>`
 }
 
-const card = (item, func) => {
+const card = (item, handler) => {
   const {image, title, labels, description, price, discount} = item;
   
   const element = document.createElement('li');
@@ -35,7 +35,7 @@ const card = (item, func) => {
   
   const delButton = document.createElement('button');
   delButton.classList.add('card__delete');
-  delButton.addEventListener('click', func);
+  delButton.addEventListener('click', handler);
   element.appendChild(delButton);
   
   return element;

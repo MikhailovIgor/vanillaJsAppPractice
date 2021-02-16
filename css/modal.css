@@ -1,5 +1,4 @@
 .modal {
-    display: none;
     position: fixed;
     z-index: 100;
     left: 0;
@@ -10,8 +9,9 @@
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-.modal__form {
+.form {
     position: absolute;
+    z-index: 200;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -25,6 +25,8 @@
 }
 
 .form__container {
+    display: flex;
+    flex-direction: column;
     padding: 10px;
 }
  .form__container > * {
@@ -36,7 +38,8 @@
     margin-bottom: -15px;
 }
 
-.modal__required {
+.form__label--required::after {
+    content: " *";
     color: red;
 }
 
@@ -80,10 +83,6 @@
     background-color: #000;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
 }
-
-.form__checkboxLabel--hot {}
-
-.form__checkboxLabel--new {}
 
 .form__column {
     display: flex;
@@ -130,4 +129,8 @@
 
 .form__submit:hover {
     border: 1px solid tomato;
+}
+
+.form__checkboxLabel {
+    text-transform: uppercase;
 }
