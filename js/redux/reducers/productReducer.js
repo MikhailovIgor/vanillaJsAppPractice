@@ -1,4 +1,4 @@
-import {DELETE_PRODUCT, GET_PRODUCTS} from "./types.js";
+import {DELETE_PRODUCT, GET_PRODUCTS} from "../types.js";
 
 export function productReducer(state= [], action) {
   console.log(action.type);

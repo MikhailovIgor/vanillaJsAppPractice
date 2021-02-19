@@ -74,14 +74,5 @@
     position: absolute;
     right: -10px;
     bottom: -15px;
-    background-color: tomato;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    border: none;
 }
 
-.card__delete:after {
-    content: 'X';
-    color: #fff;
-}

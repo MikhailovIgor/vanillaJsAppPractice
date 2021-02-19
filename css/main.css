@@ -5,11 +5,13 @@
   margin: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
+
 }
 
 .container {
   display: flex;
   background-color: #9b9b9b;
+  /*height: 100vh;*/
 }
 
 .itemsList {
@@ -25,7 +27,7 @@
   overflow: hidden;
 }
 
-.openModal {
+.addCardBtn {
   all: unset;
   position: fixed;
   right: 5%;
@@ -42,6 +44,19 @@
   transition: all .2s ease-in-out;
 }
 
-.openModal:hover {
+.addCardBtn:hover {
   transform: scale(1.1);
+}
+
+.delBtn {
+  background-color: tomato;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: none;
+}
+
+.delBtn:after {
+  content: 'X';
+  color: #fff;
 }

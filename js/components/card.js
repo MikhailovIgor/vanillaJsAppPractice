@@ -1,3 +1,5 @@
+import {delButton as btn} from './delButton.js';
+
 const HOT = `<div class='card__label card__label--hot'>HOT</div>`;
 const NEW = `<div class='card__label card__label--new'>NEW</div>`;
 
@@ -31,11 +33,10 @@ const card = (itemData, onDelete) => {
         ${getPrice(price, discount)}
       </div>
     </div>
-  `)
+  `);
   
-  const delButton = document.createElement('button');
+  const delButton = btn(onDelete);
   delButton.classList.add('card__delete');
-  delButton.addEventListener('click', onDelete);
   element.appendChild(delButton);
   
   return element;

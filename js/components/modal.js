@@ -1,8 +1,17 @@
+import {delButton as btn} from './delButton.js';
+import {dispatch} from '../redux/index.js';
+import {closeModal} from "../redux/actions.js";
 
 const modal = () => {
+
+  const closeModalButton  = btn(() => dispatch(closeModal()));
+  closeModalButton.classList.add('form__close');
   
   const modalBackdrop = document.createElement('div');
   modalBackdrop.classList.add('modalBackdrop');
+  
+  const formWrapper = document.createElement('div');
+  formWrapper.classList.add('formWrap');
   
   const form = document.createElement('form');
   form.classList.add('form');
@@ -42,7 +51,8 @@ const modal = () => {
         </div>
   `);
   
-  modalBackdrop.appendChild(form);
+  formWrapper.append(closeModalButton, form);
+  modalBackdrop.appendChild(formWrapper);
 
   return modalBackdrop;
 };

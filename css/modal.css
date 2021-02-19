@@ -12,11 +12,16 @@
     background-color: rgba(0, 0, 0, 0.6);
 }
 
+.formWrap {
+    position: fixed;
+    width: 450px;
+    height: 600px;
+}
+
 .form {
     border: 1px solid black;
     border-radius: 3px;
     background-color: #b8b8b8;
-    width: 450px;
     height: 600px;
     padding: 20px;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.3);
@@ -131,4 +136,10 @@
 
 .form__checkboxLabel {
     text-transform: uppercase;
+}
+
+.form__close {
+    position: absolute;
+    right: -10px;
+    top: -15px;
 }
