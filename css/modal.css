@@ -1,4 +1,7 @@
-.modal {
+.modalBackdrop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     z-index: 100;
     left: 0;
@@ -10,11 +13,6 @@
 }
 
 .form {
-    position: absolute;
-    z-index: 200;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     border: 1px solid black;
     border-radius: 3px;
     background-color: #b8b8b8;

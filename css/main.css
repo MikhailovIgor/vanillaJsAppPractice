@@ -9,13 +9,10 @@
 
 .container {
   display: flex;
-}
-
-main {
   background-color: #9b9b9b;
 }
 
-.items {
+.itemsList {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

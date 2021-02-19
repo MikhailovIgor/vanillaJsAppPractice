@@ -18,6 +18,8 @@ export function createStore(reducer, initialState) {
   };
   
   return {
-    getState, dispatch, subscribe
+    getState,
+    dispatch,
+    subscribe
   };
 }

@@ -4,10 +4,10 @@ const NEW = `<div class='card__label card__label--new'>NEW</div>`;
 const getPrice = (price, discount = 0) => {
   const discountPrice = Math.round(price - (price * discount));
   return discount ? `<del class='card__oldPrice'>${price}</del><p>$${discountPrice}</p>` : `<p>$${price}</p>`
-}
+};
 
-const card = (item, handler) => {
-  const {image, title, labels, description, price, discount} = item;
+const card = (itemData, onDelete) => {
+  const {image, title, labels, description, price, discount} = itemData;
   
   const element = document.createElement('li');
   element.classList.add('card');
@@ -35,7 +35,7 @@ const card = (item, handler) => {
   
   const delButton = document.createElement('button');
   delButton.classList.add('card__delete');
-  delButton.addEventListener('click', handler);
+  delButton.addEventListener('click', onDelete);
   element.appendChild(delButton);
   
   return element;

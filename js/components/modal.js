@@ -1,7 +1,8 @@
-const renderModal = () => {
-  const root = document.getElementById('root');
-  const modal = document.createElement('div');
-  modal.classList.add('modal');
+
+const modal = () => {
+  
+  const modalBackdrop = document.createElement('div');
+  modalBackdrop.classList.add('modalBackdrop');
   
   const form = document.createElement('form');
   form.classList.add('form');
@@ -41,15 +42,9 @@ const renderModal = () => {
         </div>
   `);
   
-  root.appendChild(modal);
-  root.appendChild(form);
-  
-  modal.addEventListener('click', () => {
-    if(form) {
-      form.remove();
-      modal.remove();
-    }
-  });
+  modalBackdrop.appendChild(form);
+
+  return modalBackdrop;
 };
 
-export default renderModal;
+export default modal;
