@@ -1,7 +1,7 @@
-import {createStore} from "./store.js";
-import {productReducer} from "./productReducer.js";
+import {createStore} from './store.js';
+import {rootReducer} from './reducers/rootReducer.js';
 
-const { getState, dispatch, subscribe } = createStore(productReducer, []);
+const { getState, dispatch, subscribe } = createStore(rootReducer);
 
 export {
   getState,

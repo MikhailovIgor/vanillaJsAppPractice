@@ -1,25 +1,20 @@
+@import "card.css";
+@import "modal.css";
+
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
-}
-header {
-  height: 50px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  background-color: forestgreen;
+  font-family: Arial, sans-serif;
+
 }
 
 .container {
   display: flex;
-}
-
-main {
   background-color: #9b9b9b;
+  /*height: 100vh;*/
 }
 
-.items {
+.itemsList {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -28,8 +23,44 @@ main {
   width: 80%;
 }
 
-footer {
-  background-color: rgb(68, 60, 60);
-  height: 50px;
+.overflow-hidden {
+  overflow: hidden;
 }
 
+.addCardBtn {
+  all: unset;
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  background-color: tomato;
+  color: #fff;
+  border: none;
+  font-size: xx-large;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  text-align: center;
+  transition: all .2s ease-in-out;
+}
+
+.addCardBtn:hover {
+  transform: scale(1.1);
+}
+.addCardBtn:after {
+  content: '+';
+  color: #fff;
+}
+
+.delBtn {
+  background-color: tomato;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: none;
+}
+
+.delBtn:after {
+  content: 'X';
+  color: #fff;
+}

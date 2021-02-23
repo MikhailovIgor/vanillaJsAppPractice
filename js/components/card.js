@@ -1,13 +1,15 @@
+import {delButton as btn} from './delButton.js';
+
 const HOT = `<div class='card__label card__label--hot'>HOT</div>`;
 const NEW = `<div class='card__label card__label--new'>NEW</div>`;
 
 const getPrice = (price, discount = 0) => {
-  const discountPrice = Math.round(price - (price * discount));
+  const discountPrice = Math.round(price - (price * (discount/100)));
   return discount ? `<del class='card__oldPrice'>${price}</del><p>$${discountPrice}</p>` : `<p>$${price}</p>`
-}
+};
 
-const card = (item, func) => {
-  const {image, title, labels, description, price, discount} = item;
+const card = (itemData, onDelete) => {
+  const {image, title, labels, description, price, discount} = itemData;
   
   const element = document.createElement('li');
   element.classList.add('card');
@@ -31,11 +33,10 @@ const card = (item, func) => {
         ${getPrice(price, discount)}
       </div>
     </div>
-  `)
+  `);
   
-  const delButton = document.createElement('button');
+  const delButton = btn(onDelete);
   delButton.classList.add('card__delete');
-  delButton.addEventListener('click', func);
   element.appendChild(delButton);
   
   return element;
