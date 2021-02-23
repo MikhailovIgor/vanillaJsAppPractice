@@ -1,5 +1,5 @@
 .card {
-    height: 450px;
+    /*height: 450px;*/
     width: 300px;
     border: 1px solid black;
     border-radius: 5px;
@@ -9,6 +9,9 @@
     display: flex;
     flex-direction: column;
     position: relative;
+}
+.card:hover {
+    box-shadow: 0 0 14px rgba(44,44,44,.7);
 }
 
 .card__image {
@@ -43,25 +46,29 @@
 .card__info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     margin: 10px 20px;
+    height: 100%;
 }
 
 .card__title {
-    margin-bottom: 10px;
+    padding-top: 10px;
 }
 
 .card__description {
     padding: 20px 0;
-    border-bottom : 2px solid #cdc8c8;
+    word-wrap: break-word;
+    flex-grow: 4;
+    margin-bottom: 10px;
 }
 
 .card__price {
     color: #e3bf07;
     font-weight: bold;
-    margin-top: 20px;
+    padding: 20px 0;
     display: flex;
     justify-content: end;
+    border-top: 2px solid #cdc8c8;
 }
 
 .card__oldPrice {

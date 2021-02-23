@@ -47,6 +47,10 @@
 .addCardBtn:hover {
   transform: scale(1.1);
 }
+.addCardBtn:after {
+  content: '+';
+  color: #fff;
+}
 
 .delBtn {
   background-color: tomato;

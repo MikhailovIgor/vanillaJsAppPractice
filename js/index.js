@@ -6,11 +6,11 @@ import {getState, dispatch, subscribe} from './redux/index.js';
 
 const root = document.getElementById('root');
 
-const render = store => {
+const render = ({products, modalR}) => {
   root.innerHTML = '';
   root.append(
-    itemsList(store.products),
-    store.modal.isOpened ? modal() : '',
+    itemsList(products),
+    modalR.isOpened ? modal() : '',
     addCardButton(() => dispatch(showModal()))
   );
 };

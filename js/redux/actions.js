@@ -1,4 +1,4 @@
-import {DELETE_PRODUCT, GET_PRODUCTS, OPEN_MODAL, CLOSE_MODAL } from './types.js';
+import {DELETE_PRODUCT, GET_PRODUCTS, OPEN_MODAL, CLOSE_MODAL, ADD_PRODUCT } from './types.js';
 import API from '../api/products.js';
 import {dispatch} from "./index.js";
 
@@ -15,3 +15,8 @@ export const getProducts = () =>
 export const showModal = () => ({type:OPEN_MODAL});
 
 export const closeModal = () => ({type:CLOSE_MODAL});
+
+export const addProduct = (product) =>
+  API.addProduct(product)
+    .then(() => dispatch({type: ADD_PRODUCT, payload: product}))
+    .catch(err => console.log(err));

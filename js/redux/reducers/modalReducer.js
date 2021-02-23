@@ -1,4 +1,4 @@
-import {OPEN_MODAL, CLOSE_MODAL, EDIT_PRODUCT} from "../types.js";
+import {OPEN_MODAL, CLOSE_MODAL} from "../types.js";
 
 export function modalReducer(state= {isOpened: false}, action) {
   console.log(action.type);
@@ -7,8 +7,6 @@ export function modalReducer(state= {isOpened: false}, action) {
       return {isOpened: true};
     case CLOSE_MODAL:
       return {isOpened: false};
-    case EDIT_PRODUCT:
-      return ;
     default: return state;
   }
 }

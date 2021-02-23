@@ -4,7 +4,7 @@ const HOT = `<div class='card__label card__label--hot'>HOT</div>`;
 const NEW = `<div class='card__label card__label--new'>NEW</div>`;
 
 const getPrice = (price, discount = 0) => {
-  const discountPrice = Math.round(price - (price * discount));
+  const discountPrice = Math.round(price - (price * (discount/100)));
   return discount ? `<del class='card__oldPrice'>${price}</del><p>$${discountPrice}</p>` : `<p>$${price}</p>`
 };
 

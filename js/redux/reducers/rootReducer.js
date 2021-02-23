@@ -17,4 +17,4 @@ function combineReducers(reducers) {
   }
 }
 
-export const rootReducer = combineReducers({products: productReducer, modal: modalReducer});
+export const rootReducer = combineReducers({products: productReducer, modalR: modalReducer});
