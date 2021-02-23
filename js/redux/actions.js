@@ -18,5 +18,5 @@ export const closeModal = () => ({type:CLOSE_MODAL});
 
 export const addProduct = (product) =>
   API.addProduct(product)
-    .then(() => dispatch({type: ADD_PRODUCT, payload: product}))
+    .then((prod) => dispatch({type: ADD_PRODUCT, payload: prod}))
     .catch(err => console.log(err));

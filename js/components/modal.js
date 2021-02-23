@@ -68,8 +68,6 @@ const modal = () => {
     };
     
     dispatch(addProduct(product))
-    
-    console.log(product)
     dispatch(closeModal());
   })
   
