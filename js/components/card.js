@@ -1,4 +1,5 @@
 import {delButton as btn} from './delButton.js';
+import {editCardButton as editBtn} from './editCardButton.js';
 
 const HOT = `<div class='card__label card__label--hot'>HOT</div>`;
 const NEW = `<div class='card__label card__label--new'>NEW</div>`;
@@ -8,7 +9,7 @@ const getPrice = (price, discount = 0) => {
   return discount ? `<del class='card__oldPrice'>${price}</del><p>$${discountPrice}</p>` : `<p>$${price}</p>`
 };
 
-const card = (itemData, onDelete) => {
+const card = (itemData, onDelete, onEdit) => {
   const {image, title, labels, description, price, discount} = itemData;
   
   const element = document.createElement('li');
@@ -35,9 +36,12 @@ const card = (itemData, onDelete) => {
     </div>
   `);
   
+
   const delButton = btn(onDelete);
-  delButton.classList.add('card__delete');
   element.appendChild(delButton);
+  
+  const editButton = editBtn(onEdit);
+  element.appendChild(editButton);
   
   return element;
 };

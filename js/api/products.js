@@ -21,9 +21,19 @@ const URL = 'http://localhost:3000/items';
   return await resp.json();
  }
  
+ const editProduct = async (product) => {
+  const resp = await fetch(`${URL}/${product.id}`, {
+   headers: {'Content-Type': 'application/json;charset=utf-8'},
+   method: 'PUT',
+   body: JSON.stringify(product)
+  })
+  return await resp.json();
+ }
+ 
  export default {
   getProducts,
   delProduct,
-  addProduct
+  addProduct,
+  editProduct
  };
  

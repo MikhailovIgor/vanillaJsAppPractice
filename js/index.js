@@ -10,7 +10,7 @@ const render = ({products, modalR}) => {
   root.innerHTML = '';
   root.append(
     itemsList(products),
-    modalR.isOpened ? modal() : '',
+    modalR.isOpened ? modal(modalR.product) : '',
     addCardButton(() => dispatch(showModal()))
   );
 };

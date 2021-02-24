@@ -1,5 +1,4 @@
 .card {
-    /*height: 450px;*/
     width: 300px;
     border: 1px solid black;
     border-radius: 5px;
@@ -81,5 +80,35 @@
     position: absolute;
     right: -10px;
     bottom: -15px;
+    background-color: tomato;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: none;
 }
 
+.card__delete:after {
+    content: 'X';
+    color: #fff;
+}
+
+.editCardBtn {
+    position: absolute;
+    right: 45px;
+    bottom: -15px;
+    background-color: forestgreen;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+}
+
+.editCardBtn:after {
+    content: url("https://img.icons8.com/small/16/ffffff/edit.png");
+}
+
+.editCardBtn:hover,
+.card__delete:hover {
+    transform: scale(1.1);
+}
