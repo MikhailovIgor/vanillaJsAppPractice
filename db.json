@@ -6,7 +6,7 @@
       "image": "img/01.jpeg",
       "description": "Android 9.0 Pie, Qualcomm Snapdragon 439, 2/16GB, 13 MPX camera, Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "price": 238,
-      "discount": 0.2,
+      "discount": 20,
       "labels": {
         "hot": true,
         "new": true
@@ -25,12 +25,24 @@
       }
     },
     {
+      "id": 3,
+      "title": "Sumsung Galaxy Note 10",
+      "image": "img/03.jpeg",
+      "description": "Android 9.0 Pie, Qualcomm Snapdragon 439, 2/16GB, 13 MPX camera, Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "price": 2094,
+      "discount": 30,
+      "labels": {
+        "hot": false,
+        "new": false
+      }
+    },
+    {
       "id": 4,
       "title": "Apple",
       "image": "img/04.jpeg",
       "description": "Android 9.0 Pie, Qualcomm Snapdragon 439, 2/16GB, 13 MPX camera, Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "price": 1746,
-      "discount": 0.15,
+      "discount": 15,
       "labels": {
         "hot": true,
         "new": false
@@ -59,42 +71,6 @@
         "hot": true,
         "new": true
       }
-    },
-    {
-      "title": "test",
-      "image": "https://picsum.photos/200/300",
-      "description": "Added non-passive event listener to a scroll-blocking 'touchmove' event. Consider marking event handler as 'passive' to make the page more responsive",
-      "price": 950,
-      "discount": 10,
-      "labels": {
-        "hot": false,
-        "new": false
-      },
-      "id": 7
-    },
-    {
-      "title": "ertge",
-      "image": "https://picsum.photos/200/300",
-      "description": "defvfe Added non-passive event listener to a scroll-blocking 'touchmove' event. Consider marking event handler as 'passive' to make the page more responsiveAdded non-passive event ",
-      "price": 555,
-      "discount": null,
-      "labels": {
-        "hot": false,
-        "new": false
-      },
-      "id": 8
-    },
-    {
-      "title": "test2",
-      "image": "https://picsum.photos/200/300",
-      "description": "Added non-passive event listener to a scroll-blocking 'touchmove' event. Consider marking event handler as 'passive' to make the page more responsive",
-      "price": 44,
-      "discount": null,
-      "labels": {
-        "hot": false,
-        "new": true
-      },
-      "id": 9
     }
   ]
 }

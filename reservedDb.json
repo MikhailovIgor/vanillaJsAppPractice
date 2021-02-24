@@ -6,7 +6,7 @@
       "image": "img/01.jpeg",
       "description": "Android 9.0 Pie, Qualcomm Snapdragon 439, 2/16GB, 13 MPX camera, Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "price": 238,
-      "discount": 0.2,
+      "discount": 20,
       "labels": {
         "hot": true,
         "new": true
@@ -30,7 +30,7 @@
       "image": "img/03.jpeg",
       "description": "Android 9.0 Pie, Qualcomm Snapdragon 439, 2/16GB, 13 MPX camera, Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "price": 2094,
-      "discount": 0.2,
+      "discount": 20,
       "labels": {
         "hot": false,
         "new": false
@@ -42,7 +42,7 @@
       "image": "img/04.jpeg",
       "description": "Android 9.0 Pie, Qualcomm Snapdragon 439, 2/16GB, 13 MPX camera, Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "price": 1746,
-      "discount": 0.15,
+      "discount": 15,
       "labels": {
         "hot": true,
         "new": false

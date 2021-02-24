@@ -1,4 +1,4 @@
-import {DELETE_PRODUCT, GET_PRODUCTS, ADD_PRODUCT} from "../types.js";
+import {DELETE_PRODUCT, GET_PRODUCTS, ADD_PRODUCT, EDIT_PRODUCT} from "../types.js";
 
 export function productReducer(state= [], action) {
   console.log(action.type);
@@ -9,6 +9,8 @@ export function productReducer(state= [], action) {
       return [...action.payload];
     case ADD_PRODUCT:
       return [...state, action.payload];
+    case EDIT_PRODUCT:
+      return state.map(item => item.id === action.payload.id ? {...action.payload} : {...item});
     default: return state;
   }
 }

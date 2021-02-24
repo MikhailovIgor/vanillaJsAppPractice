@@ -1,6 +1,6 @@
 import card from './card.js';
 import {dispatch} from '../redux/index.js';
-import {deleteProduct} from "../redux/actions.js";
+import {deleteProduct, showModalForEdit} from "../redux/actions.js";
 
 const itemsList = (data) => {
   
@@ -10,7 +10,11 @@ const itemsList = (data) => {
   itemsList.classList.add('itemsList');
   container.appendChild(itemsList);
 
-  itemsList.append(...data.map(item => card(item, () => dispatch(deleteProduct(item.id)))));
+  itemsList.append(...data.map(item => card(
+    item,
+    () => dispatch(deleteProduct(item.id)),
+    () => dispatch(showModalForEdit(item))
+  )));
   
   return container;
 };
